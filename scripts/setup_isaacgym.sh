@@ -22,6 +22,7 @@ if [[ ! -f $SENTINEL_FILE ]]; then
 
   # Create the conda environment
   if [[ ! -d $ENV_ROOT ]]; then
+    $CONDA_ROOT/bin/conda config --set show_channel_urls yes
     $CONDA_ROOT/bin/conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
     $CONDA_ROOT/bin/conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
     $CONDA_ROOT/bin/conda install -y mamba -c conda-forge -n base
@@ -42,11 +43,22 @@ if [[ ! -f $SENTINEL_FILE ]]; then
     wget https://developer.nvidia.com/isaac-gym-preview-4 -O $WORKSPACE_DIR/IsaacGym_Preview_4_Package.tar.gz
     tar -xzf $WORKSPACE_DIR/IsaacGym_Preview_4_Package.tar.gz -C $WORKSPACE_DIR
   fi
-  cd $WORKSPACE_DIR/isaacgym/python
+  ISAACGYM_PATH=$WORKSPACE_DIR/isaacgym
+  cd $ISAACGYM_PATH/python
   $ENV_ROOT/bin/pip install -e .
 
   # Install Holosoma
-  pip install -U pip
-  pip install -e $ROOT_DIR/src/holosoma[unitree,booster]
-  touch $SENTINEL_FILE
+  # pip install -U pip
+  # pip install -e $ROOT_DIR/src/holosoma[unitree,booster]
+  # touch $SENTINEL_FILE
+  # Upgrade pip (with proxy & timeout)
+  HTTPS_PROXY=http://127.0.0.1:7890 HTTP_PROXY=http://127.0.0.1:7890 \
+  pip install -U pip --default-timeout=600 --retries=20
+
+  # Install Holosoma (editable, with extras)
+  HTTPS_PROXY=http://127.0.0.1:7890 HTTP_PROXY=http://127.0.0.1:7890 \
+  pip install -e "$ROOT_DIR/src/holosoma[unitree,booster]" \
+    --default-timeout=600 --retries=20
+
+  touch "$SENTINEL_FILE"
 fi

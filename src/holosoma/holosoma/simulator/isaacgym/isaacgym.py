@@ -205,15 +205,32 @@ class IsaacGym(BaseSimulator):
         tm_params = gymapi.TriangleMeshParams()
         terrain_state = self.terrain_manager.get_state("locomotion_terrain")
         assert terrain_state.mesh is not None
+
+        # Validate mesh data
         vertices = terrain_state.mesh.vertices.astype(np.float32)
         triangles = terrain_state.mesh.faces.astype(np.uint32)
-        tm_params.nb_vertices = vertices.shape[0]
-        tm_params.nb_triangles = triangles.shape[0]
 
+        logger.info(f"Mesh stats: {vertices.shape[0]} vertices, {triangles.shape[0]} triangles")
+        logger.info(f"Vertices range: min={vertices.min(axis=0)}, max={vertices.max(axis=0)}")
+
+        # Check for invalid values
+        if np.any(np.isnan(vertices)) or np.any(np.isinf(vertices)):
+            raise ValueError("Mesh vertices contain NaN or Inf values")
+        if vertices.shape[0] == 0 or triangles.shape[0] == 0:
+            raise ValueError("Mesh is empty")
+
+        # Ensure contiguous arrays
+        vertices = np.ascontiguousarray(vertices.flatten(order="C"))
+        triangles = np.ascontiguousarray(triangles.flatten(order="C"))
+
+        tm_params.nb_vertices = terrain_state.mesh.vertices.shape[0]
+        tm_params.nb_triangles = terrain_state.mesh.faces.shape[0]
         tm_params.static_friction = terrain_state.static_friction
         tm_params.dynamic_friction = terrain_state.dynamic_friction
         tm_params.restitution = terrain_state.restitution
-        self.gym.add_triangle_mesh(self.sim, vertices.flatten(order="C"), triangles.flatten(order="C"), tm_params)
+
+        logger.info(f"Calling add_triangle_mesh with {tm_params.nb_vertices} vertices, {tm_params.nb_triangles} triangles")
+        self.gym.add_triangle_mesh(self.sim, vertices, triangles, tm_params)
         logger.info("Created trimesh terrain")
 
     def _create_ground_plane(self):

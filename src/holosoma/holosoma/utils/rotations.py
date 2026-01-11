@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Optional
+
 import numpy as np
 import torch
 import torch.nn.functional as torch_nn_func
@@ -436,7 +438,7 @@ def quat_identity_like(x):
 
 
 @torch_jit_script
-def transform_from_rotation_translation(r: torch.Tensor | None = None, t: torch.Tensor | None = None):
+def transform_from_rotation_translation(r: Optional[torch.Tensor] = None, t: Optional[torch.Tensor] = None):
     """
     Construct a transform from a quaternion and 3D translation. Only one of them can be None.
     """
@@ -642,8 +644,8 @@ def quat_error_magnitude(q1: torch.Tensor, q2: torch.Tensor, w_last: bool = True
 def subtract_frame_transforms(
     t01: torch.Tensor,
     q01: torch.Tensor,
-    t02: torch.Tensor | None = None,
-    q02: torch.Tensor | None = None,
+    t02: Optional[torch.Tensor] = None,
+    q02: Optional[torch.Tensor] = None,
     w_last: bool = True,
 ) -> tuple[torch.Tensor, torch.Tensor]:
     r"""Subtract transformations between two reference frames into a stationary frame.

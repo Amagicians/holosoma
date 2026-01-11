@@ -7,9 +7,9 @@ import torch
 import torch.distributed as dist
 from tensordict import TensorDict
 from torch import nn
-from torch.amp import GradScaler
 
 from holosoma.config_types.algo import FastSACConfig
+from holosoma.utils.safe_torch_import import GradScaler
 
 
 class SimpleReplayBuffer(nn.Module):
