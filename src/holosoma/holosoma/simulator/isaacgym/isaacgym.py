@@ -262,7 +262,21 @@ class IsaacGym(BaseSimulator):
             f"Number of bodies ({self.num_bodies}) must be equal to number of body names "
             f"({len(self.robot_config.body_names)})"
         )
+        if self.dof_names != self.robot_config.dof_names:
+            print("\n[DEBUG] IsaacGym DOF names (actual order):")
+            for i, n in enumerate(self.dof_names):
+                print(f"  [{i}] {n}")
+            print("[DEBUG] Config DOF names:")
+            for i, n in enumerate(self.robot_config.dof_names):
+                print(f"  [{i}] {n}")
         assert self.dof_names == self.robot_config.dof_names, "DOF names must match the config"
+        if self.body_names != self.robot_config.body_names:
+            print("\n[DEBUG] IsaacGym body names (actual order):")
+            for i, n in enumerate(self.body_names):
+                print(f"  [{i}] {n}")
+            print("[DEBUG] Config body names:")
+            for i, n in enumerate(self.robot_config.body_names):
+                print(f"  [{i}] {n}")
         assert self.body_names == self.robot_config.body_names, "Body names must match the config"
 
     @property

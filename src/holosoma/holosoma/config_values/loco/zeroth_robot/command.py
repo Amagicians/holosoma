@@ -1,0 +1,40 @@
+"""Locomotion command presets for zeroth_robot."""
+
+from holosoma.config_types.command import CommandManagerCfg, CommandTermCfg
+
+zeroth_robot_command = CommandManagerCfg(
+    params={
+        "locomotion_command_resampling_time": 10.0,
+    },
+    setup_terms={
+        "locomotion_gait": CommandTermCfg(
+            func="holosoma.managers.command.terms.locomotion:LocomotionGait",
+            params={
+                "gait_period": 1.0,
+                "gait_period_randomization_width": 0.2,
+            },
+        ),
+        "locomotion_command": CommandTermCfg(
+            func="holosoma.managers.command.terms.locomotion:LocomotionCommand",
+            params={
+                "command_ranges": {
+                    "lin_vel_x": [-0.5, 0.5],
+                    "lin_vel_y": [-0.5, 0.5],
+                    "ang_vel_yaw": [-1.0, 1.0],
+                    "heading": [-3.14, 3.14],
+                },
+                "stand_prob": 0.2,
+            },
+        ),
+    },
+    reset_terms={
+        "locomotion_gait": CommandTermCfg(func="holosoma.managers.command.terms.locomotion:LocomotionGait"),
+        "locomotion_command": CommandTermCfg(func="holosoma.managers.command.terms.locomotion:LocomotionCommand"),
+    },
+    step_terms={
+        "locomotion_gait": CommandTermCfg(func="holosoma.managers.command.terms.locomotion:LocomotionGait"),
+        "locomotion_command": CommandTermCfg(func="holosoma.managers.command.terms.locomotion:LocomotionCommand"),
+    },
+)
+
+__all__ = ["zeroth_robot_command"]

@@ -1104,8 +1104,282 @@ g1_29dof_w_object = replace(
     ),
 )
 
+zeroth_robot = RobotConfig(
+    num_bodies=17,
+    dof_obs_size=16,
+    actions_dim=16,
+    policy_obs_dim=-1,
+    critic_obs_dim=-1,
+    algo_obs_dim_dict={},
+    contact_pairs_multiplier=16,
+    key_bodies=["foot_left", "foot_right"],
+    num_feet=2,
+    foot_body_name="foot",
+    foot_height_name="foot",
+    knee_name="knee_pitch",
+    torso_name="draft__speaker_mount",
+    dof_names=[
+        # IsaacGym kinematic tree order (left leg → left arm → right leg → right arm)
+        "left_hip_pitch",
+        "left_hip_yaw",   # yaw before roll in IsaacGym order
+        "left_hip_roll",
+        "left_knee_pitch",
+        "left_ankle_pitch",
+        "left_shoulder_pitch",
+        "left_shoulder_yaw",
+        "left_elbow_yaw",
+        "right_hip_pitch",
+        "right_hip_yaw",  # yaw before roll in IsaacGym order
+        "right_hip_roll",
+        "right_knee_pitch",
+        "right_ankle_pitch",
+        "right_shoulder_pitch",
+        "right_shoulder_yaw",
+        "right_elbow_yaw",
+    ],
+    upper_dof_names=[
+        "left_shoulder_pitch",
+        "left_shoulder_yaw",
+        "left_elbow_yaw",
+        "right_shoulder_pitch",
+        "right_shoulder_yaw",
+        "right_elbow_yaw",
+    ],
+    upper_left_arm_dof_names=[
+        "left_shoulder_pitch",
+        "left_shoulder_yaw",
+        "left_elbow_yaw",
+    ],
+    upper_right_arm_dof_names=[
+        "right_shoulder_pitch",
+        "right_shoulder_yaw",
+        "right_elbow_yaw",
+    ],
+    lower_dof_names=[
+        "left_hip_pitch",
+        "left_hip_roll",
+        "left_hip_yaw",
+        "left_knee_pitch",
+        "left_ankle_pitch",
+        "right_hip_pitch",
+        "right_hip_roll",
+        "right_hip_yaw",
+        "right_knee_pitch",
+        "right_ankle_pitch",
+    ],
+    has_torso=False,
+    has_upper_body_dof=True,
+    left_ankle_dof_names=["left_ankle_pitch"],
+    right_ankle_dof_names=["right_ankle_pitch"],
+    knee_dof_names=["left_knee_pitch", "right_knee_pitch"],
+    hips_dof_names=[
+        "left_hip_pitch",
+        "left_hip_roll",
+        "left_hip_yaw",
+        "right_hip_pitch",
+        "right_hip_roll",
+        "right_hip_yaw",
+    ],
+    # DOF limits in dof_names order (IsaacGym order)
+    dof_pos_lower_limit_list=[
+        -1.5708,    # left_hip_pitch
+        -0.0872665, # left_hip_yaw
+        -0.785398,  # left_hip_roll
+        -1.5708,    # left_knee_pitch
+        -1.5708,    # left_ankle_pitch
+        -1.74533,   # left_shoulder_pitch
+        -0.174533,  # left_shoulder_yaw
+        -1.0472,    # left_elbow_yaw
+        -1.5708,    # right_hip_pitch
+        -0.0872665, # right_hip_yaw
+        -0.785398,  # right_hip_roll
+        -1.5708,    # right_knee_pitch
+        -1.5708,    # right_ankle_pitch
+        -1.74533,   # right_shoulder_pitch
+        -0.174533,  # right_shoulder_yaw
+        -1.0472,    # right_elbow_yaw
+    ],
+    dof_pos_upper_limit_list=[
+        1.5708,     # left_hip_pitch
+        1.5708,     # left_hip_yaw
+        0.785398,   # left_hip_roll
+        1.5708,     # left_knee_pitch
+        1.5708,     # left_ankle_pitch
+        1.74533,    # left_shoulder_pitch
+        0.872665,   # left_shoulder_yaw
+        1.0472,     # left_elbow_yaw
+        1.5708,     # right_hip_pitch
+        1.5708,     # right_hip_yaw
+        0.785398,   # right_hip_roll
+        1.5708,     # right_knee_pitch
+        1.5708,     # right_ankle_pitch
+        1.74533,    # right_shoulder_pitch
+        0.872665,   # right_shoulder_yaw
+        1.0472,     # right_elbow_yaw
+    ],
+    dof_vel_limit_list=[10.0] * 16,
+    dof_effort_limit_list=[10.0] * 16,
+    dof_armature_list=[0.001] * 16,
+    dof_joint_friction_list=[0.0] * 16,
+    body_names=[
+        "draft__speaker_mount",
+        "hip_yaw_left",
+        "hip_roll_left",
+        "knee_pitch_left",
+        "ankle_pitch_left",
+        "foot_left",
+        # left arm (matches IsaacGym tree order: left leg → left arm → right leg → right arm)
+        "left_shoulder_yaw",
+        "elbow_bracket_right",
+        "left_hand",
+        # right leg
+        "hip_yaw_right",
+        "hip_roll_right",
+        "knee_pitch_right",
+        "ankle_pitch_right",
+        "foot_right",
+        # right arm
+        "right_shoulder_yaw",
+        "elbow_bracket_left",
+        "right_hand",
+    ],
+    terminate_after_contacts_on=["draft__speaker_mount", "hip", "knee_pitch", "shoulder", "hand"],
+    penalize_contacts_on=["draft__speaker_mount", "hip", "knee_pitch", "shoulder"],
+    init_state=RobotInitState(
+        pos=[0.0, 0.0, 0.37],  # initial spawn height, tune if robot spawns too high/low
+        rot=[0.0, 0.0, 0.0, 1.0],
+        lin_vel=[0.0, 0.0, 0.0],
+        ang_vel=[0.0, 0.0, 0.0],
+        default_joint_angles={
+            "left_hip_pitch": 0.0,
+            "left_hip_roll": 0.0,
+            "left_hip_yaw": 0.0,
+            "left_knee_pitch": 0.0,
+            "left_ankle_pitch": 0.0,
+            "right_hip_pitch": 0.0,
+            "right_hip_roll": 0.0,
+            "right_hip_yaw": 0.0,
+            "right_knee_pitch": 0.0,
+            "right_ankle_pitch": 0.0,
+            "left_shoulder_pitch": 0.0,
+            "left_shoulder_yaw": 0.0,
+            "left_elbow_yaw": 0.0,
+            "right_shoulder_pitch": 0.0,
+            "right_shoulder_yaw": 0.0,
+            "right_elbow_yaw": 0.0,
+        },
+    ),
+    randomize_link_body_names=[
+        "draft__speaker_mount",
+        "hip_yaw_left",
+        "hip_roll_left",
+        "knee_pitch_left",
+        "hip_yaw_right",
+        "hip_roll_right",
+        "knee_pitch_right",
+    ],
+    arm_dof_names=[
+        "left_shoulder_pitch",
+        "left_shoulder_yaw",
+        "left_elbow_yaw",
+        "right_shoulder_pitch",
+        "right_shoulder_yaw",
+        "right_elbow_yaw",
+    ],
+    left_arm_dof_names=[
+        "left_shoulder_pitch",
+        "left_shoulder_yaw",
+        "left_elbow_yaw",
+    ],
+    right_arm_dof_names=[
+        "right_shoulder_pitch",
+        "right_shoulder_yaw",
+        "right_elbow_yaw",
+    ],
+    symmetry_joint_names={
+        "left_hip_pitch": "right_hip_pitch",
+        "left_hip_roll": "right_hip_roll",
+        "left_hip_yaw": "right_hip_yaw",
+        "left_knee_pitch": "right_knee_pitch",
+        "left_ankle_pitch": "right_ankle_pitch",
+        "right_hip_pitch": "left_hip_pitch",
+        "right_hip_roll": "left_hip_roll",
+        "right_hip_yaw": "left_hip_yaw",
+        "right_knee_pitch": "left_knee_pitch",
+        "right_ankle_pitch": "left_ankle_pitch",
+        "left_shoulder_pitch": "right_shoulder_pitch",
+        "left_shoulder_yaw": "right_shoulder_yaw",
+        "left_elbow_yaw": "right_elbow_yaw",
+        "right_shoulder_pitch": "left_shoulder_pitch",
+        "right_shoulder_yaw": "left_shoulder_yaw",
+        "right_elbow_yaw": "left_elbow_yaw",
+    },
+    flip_sign_joint_names=[
+        "left_hip_roll",
+        "left_hip_yaw",
+        "right_hip_roll",
+        "right_hip_yaw",
+        "left_shoulder_yaw",
+        "right_shoulder_yaw",
+        "left_elbow_yaw",
+        "right_elbow_yaw",
+    ],
+    apply_dof_armature_in_isaacgym=True,
+    control=RobotControlConfig(
+        control_type="P",
+        stiffness={
+            "hip_pitch": 15.0,
+            "hip_roll": 15.0,
+            "hip_yaw": 15.0,
+            "knee_pitch": 15.0,
+            "ankle_pitch": 10.0,
+            "shoulder_pitch": 10.0,
+            "shoulder_yaw": 10.0,
+            "elbow_yaw": 8.0,
+        },
+        damping={
+            "hip_pitch": 1.0,
+            "hip_roll": 1.0,
+            "hip_yaw": 1.0,
+            "knee_pitch": 1.0,
+            "ankle_pitch": 0.5,
+            "shoulder_pitch": 0.5,
+            "shoulder_yaw": 0.5,
+            "elbow_yaw": 0.3,
+        },
+        action_scale=0.25,
+        action_clip_value=100.0,
+        clip_actions=True,
+        clip_torques=True,
+    ),
+    asset=RobotAssetConfig(
+        asset_root="@holosoma/data/robots",
+        collapse_fixed_joints=True,
+        replace_cylinder_with_capsule=True,
+        flip_visual_attachments=False,
+        armature=0.001,
+        thickness=0.01,
+        max_angular_velocity=1000.0,
+        max_linear_velocity=1000.0,
+        angular_damping=0.0,
+        linear_damping=0.0,
+        urdf_file="zeroth_robot/robot.urdf",
+        usd_file=None,
+        xml_file="",  # not used with IsaacGym
+        robot_type="zeroth_robot",
+        enable_self_collisions=False,
+        default_dof_drive_mode=3,
+        fix_base_link=False,
+    ),
+    bridge=RobotBridgeConfig(
+        sdk_type="unitree",
+        motor_type="serial",
+    ),
+)
+
 DEFAULTS = {
     "g1_29dof": g1_29dof,
     "t1_29dof_waist_wrist": t1_29dof_waist_wrist,
     "g1_29dof_w_object": g1_29dof_w_object,
+    "zeroth_robot": zeroth_robot,
 }

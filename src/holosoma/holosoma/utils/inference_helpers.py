@@ -108,7 +108,6 @@ def export_policy_as_onnx(wrapper, onnx_file_path: str, example_obs_dict):
         input_names=["actor_obs"],  # Specify the input names
         output_names=["action"],  # Name the output
         opset_version=13,
-        dynamo=False,
     )
 
 
@@ -135,7 +134,6 @@ def export_multi_agent_decouple_policy_as_onnx(wrapper, path, exported_policy_na
         input_names=[f"actor_obs_{body_key}" for body_key in body_keys],
         output_names=["action"],
         opset_version=13,
-        dynamo=False,
     )
 
 

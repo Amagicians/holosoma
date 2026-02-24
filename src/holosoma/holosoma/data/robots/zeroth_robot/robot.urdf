@@ -1,0 +1,1053 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/b3e2a18b1baa8c9a0fbcb3b5/w/fcaea1bf01be671a8ac7ad3f/e/591344ac36b13fd01789132d -->
+<robot name="tuned-robot">
+  <!-- Link draft__speaker_mount -->
+  <link name="draft__speaker_mount">
+    <inertial>
+      <origin xyz="0.0489418 0.0345215 -0.0546457" rpy="0 0 0"/>
+      <mass value="1.64642"/>
+      <inertia ixx="0.00638287" ixy="1.31545e-06" ixz="-2.65141e-05" iyy="0.00806178" iyz="0.000492101" izz="0.00280018"/>
+    </inertial>
+    <!-- Part imu_mount_pcb -->
+    <visual>
+      <origin xyz="0.0474936 0.0267691 -0.364702" rpy="-1.22465e-16 6.91851e-50 -1.35963e-32"/>
+      <geometry>
+        <mesh filename="meshes/imu_mount_pcb.stl"/>
+      </geometry>
+      <material name="imu_mount_pcb_material">
+        <color rgba="0.313725 0.486275 0.411765 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0474936 0.0267691 -0.364702" rpy="-1.22465e-16 6.91851e-50 -1.35963e-32"/>
+      <geometry>
+        <mesh filename="meshes/imu_mount_pcb.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part right_hip_pitch_sts3250 -->
+    <visual>
+      <origin xyz="-0.114477 -0.178716 -0.152177" rpy="1.5708 -2.05351e-16 -3.14159"/>
+      <geometry>
+        <mesh filename="meshes/right_hip_pitch_sts3250.stl"/>
+      </geometry>
+      <material name="right_hip_pitch_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.114477 -0.178716 -0.152177" rpy="1.5708 -2.05351e-16 -3.14159"/>
+      <geometry>
+        <mesh filename="meshes/right_hip_pitch_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part left_hip_pitch_sts3250 -->
+    <visual>
+      <origin xyz="-0.120536 -0.178716 -0.160386" rpy="-1.5708 -5.58483e-16 -1.38745e-16"/>
+      <geometry>
+        <mesh filename="meshes/left_hip_pitch_sts3250.stl"/>
+      </geometry>
+      <material name="left_hip_pitch_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.120536 -0.178716 -0.160386" rpy="-1.5708 -5.58483e-16 -1.38745e-16"/>
+      <geometry>
+        <mesh filename="meshes/left_hip_pitch_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part lcd_imu -->
+    <visual>
+      <origin xyz="0.0484936 0.0268191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/lcd_imu.stl"/>
+      </geometry>
+      <material name="lcd_imu_material">
+        <color rgba="0.32549 0.529412 0.752941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0484936 0.0268191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/lcd_imu.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part head -->
+    <visual>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/head.stl"/>
+      </geometry>
+      <material name="head_material">
+        <color rgba="0.4 0.4 0.4 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/head.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part mic -->
+    <visual>
+      <origin xyz="0.0474936 0.0267691 -0.364702" rpy="-1.22465e-16 6.91851e-50 -1.35963e-32"/>
+      <geometry>
+        <mesh filename="meshes/mic.stl"/>
+      </geometry>
+      <material name="mic_material">
+        <color rgba="0.8 0.8 0.8 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0474936 0.0267691 -0.364702" rpy="-1.22465e-16 6.91851e-50 -1.35963e-32"/>
+      <geometry>
+        <mesh filename="meshes/mic.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part torso -->
+    <visual>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/torso.stl"/>
+      </geometry>
+      <material name="torso_material">
+        <color rgba="0.972549 0.529412 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/torso.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part board -->
+    <visual>
+      <origin xyz="0.168593 -0.218756 -0.0704215" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/board.stl"/>
+      </geometry>
+      <material name="board_material">
+        <color rgba="0 0.501961 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.168593 -0.218756 -0.0704215" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/board.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part hip_pitch_dual_carry -->
+    <visual>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/hip_pitch_dual_carry.stl"/>
+      </geometry>
+      <material name="hip_pitch_dual_carry_material">
+        <color rgba="0.4 0.4 0.4 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/hip_pitch_dual_carry.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part draft__speaker_mount -->
+    <visual>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="4.51028e-16 -1.44219e-29 0"/>
+      <geometry>
+        <mesh filename="meshes/draft__speaker_mount.stl"/>
+      </geometry>
+      <material name="draft__speaker_mount_material">
+        <color rgba="0.501961 0.501961 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="4.51028e-16 -1.44219e-29 0"/>
+      <geometry>
+        <mesh filename="meshes/draft__speaker_mount.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part backpack -->
+    <visual>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="4.51028e-16 -0 6.41317e-17"/>
+      <geometry>
+        <mesh filename="meshes/backpack.stl"/>
+      </geometry>
+      <material name="backpack_material">
+        <color rgba="0.4 0.4 0.4 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="4.51028e-16 -0 6.41317e-17"/>
+      <geometry>
+        <mesh filename="meshes/backpack.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part milk_camera -->
+    <visual>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/milk_camera.stl"/>
+      </geometry>
+      <material name="milk_camera_material">
+        <color rgba="0.501961 0.501961 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/milk_camera.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part solid_1 -->
+    <visual>
+      <origin xyz="0.0476936 0.0268191 -0.364502" rpy="-5.08852e-18 -2.84867e-65 1.35963e-32"/>
+      <geometry>
+        <mesh filename="meshes/solid_1.stl"/>
+      </geometry>
+      <material name="solid_1_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0476936 0.0268191 -0.364502" rpy="-5.08852e-18 -2.84867e-65 1.35963e-32"/>
+      <geometry>
+        <mesh filename="meshes/solid_1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part battery__5_2_ah__dc5521_plug -->
+    <visual>
+      <origin xyz="0.0484698 0.0288225 -0.364482" rpy="4.51028e-16 -1.42246e-29 0"/>
+      <geometry>
+        <mesh filename="meshes/battery__5_2_ah__dc5521_plug.stl"/>
+      </geometry>
+      <material name="battery__5_2_ah__dc5521_plug_material">
+        <color rgba="0.4 0.584314 0.984314 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0484698 0.0288225 -0.364482" rpy="4.51028e-16 -1.42246e-29 0"/>
+      <geometry>
+        <mesh filename="meshes/battery__5_2_ah__dc5521_plug.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part milk_duos_board -->
+    <visual>
+      <origin xyz="0.0283557 0.0393568 -0.0662669" rpy="1.5708 -1.42299e-13 -1.5708"/>
+      <geometry>
+        <mesh filename="meshes/milk_duos_board.stl"/>
+      </geometry>
+      <material name="milk_duos_board_material">
+        <color rgba="0.498039 0.498039 0.498039 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0283557 0.0393568 -0.0662669" rpy="1.5708 -1.42299e-13 -1.5708"/>
+      <geometry>
+        <mesh filename="meshes/milk_duos_board.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part neck_mount -->
+    <visual>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/neck_mount.stl"/>
+      </geometry>
+      <material name="neck_mount_material">
+        <color rgba="0.4 0.4 0.4 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/neck_mount.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part left_shoulder_pitch_sts3250 -->
+    <visual>
+      <origin xyz="0.0279645 -0.424716 -0.0103862" rpy="-1.5708 -1.65874e-16 -1.38745e-16"/>
+      <geometry>
+        <mesh filename="meshes/left_shoulder_pitch_sts3250.stl"/>
+      </geometry>
+      <material name="left_shoulder_pitch_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0279645 -0.424716 -0.0103862" rpy="-1.5708 -1.65874e-16 -1.38745e-16"/>
+      <geometry>
+        <mesh filename="meshes/left_shoulder_pitch_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part torso_to_neck -->
+    <visual>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/torso_to_neck.stl"/>
+      </geometry>
+      <material name="torso_to_neck_material">
+        <color rgba="0.4 0.4 0.4 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/torso_to_neck.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part electronics_mount -->
+    <visual>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/electronics_mount.stl"/>
+      </geometry>
+      <material name="electronics_mount_material">
+        <color rgba="0.917647 0.72549 0.490196 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0484936 0.0263191 -0.364482" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="meshes/electronics_mount.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part solid -->
+    <visual>
+      <origin xyz="0.0474936 0.0268191 -0.364702" rpy="1.22465e-16 -1.73425e-48 1.35963e-32"/>
+      <geometry>
+        <mesh filename="meshes/solid.stl"/>
+      </geometry>
+      <material name="solid_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0474936 0.0268191 -0.364702" rpy="1.22465e-16 -1.73425e-48 1.35963e-32"/>
+      <geometry>
+        <mesh filename="meshes/solid.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part right_shoulder_pitch_sts3250 -->
+    <visual>
+      <origin xyz="-0.0829772 -0.424716 -0.00217687" rpy="1.5708 4.47272e-17 -3.14159"/>
+      <geometry>
+        <mesh filename="meshes/right_shoulder_pitch_sts3250.stl"/>
+      </geometry>
+      <material name="right_shoulder_pitch_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0829772 -0.424716 -0.00217687" rpy="1.5708 4.47272e-17 -3.14159"/>
+      <geometry>
+        <mesh filename="meshes/right_shoulder_pitch_sts3250.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link left_shoulder_yaw -->
+  <link name="left_shoulder_yaw">
+    <inertial>
+      <origin xyz="0.00296786 -0.000140121 0.0169439" rpy="0 0 0"/>
+      <mass value="0.045585"/>
+      <inertia ixx="2.55161e-05" ixy="7.67574e-08" ixz="-1.8779e-06" iyy="1.15467e-05" iyz="3.85846e-08" izz="2.49228e-05"/>
+    </inertial>
+    <!-- Part left_shoulder_yaw -->
+    <visual>
+      <origin xyz="0.358039 -0.0107379 -0.07815" rpy="-0.0299819 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/left_shoulder_yaw.stl"/>
+      </geometry>
+      <material name="left_shoulder_yaw_material">
+        <color rgba="0.980392 0.713725 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.358039 -0.0107379 -0.07815" rpy="-0.0299819 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/left_shoulder_yaw.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link elbow_bracket_right -->
+  <link name="elbow_bracket_right">
+    <inertial>
+      <origin xyz="8.28872e-05 0.0355414 0.0171487" rpy="0 0 0"/>
+      <mass value="0.166819"/>
+      <inertia ixx="0.000143064" ixy="-2.10903e-07" ixz="1.21663e-09" iyy="3.75959e-05" iyz="-2.51548e-07" izz="0.000130033"/>
+    </inertial>
+    <!-- Part left_shoulder_yaw_sts3250 -->
+    <visual>
+      <origin xyz="-0.00410465 -0.372035 0.185429" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/left_shoulder_yaw_sts3250.stl"/>
+      </geometry>
+      <material name="left_shoulder_yaw_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00410465 -0.372035 0.185429" rpy="-1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/left_shoulder_yaw_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part left_elbow_yaw_sts3250 -->
+    <visual>
+      <origin xyz="0.005314 0.359048 0.226579" rpy="1.57429 1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/left_elbow_yaw_sts3250.stl"/>
+      </geometry>
+      <material name="left_elbow_yaw_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.005314 0.359048 0.226579" rpy="1.57429 1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/left_elbow_yaw_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part elbow_bracket_right -->
+    <visual>
+      <origin xyz="-0.11531 0.339433 0.00783679" rpy="1.54081 -1.45769e-16 0.020944"/>
+      <geometry>
+        <mesh filename="meshes/elbow_bracket_right.stl"/>
+      </geometry>
+      <material name="elbow_bracket_right_material">
+        <color rgba="0.972549 0.529412 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.11531 0.339433 0.00783679" rpy="1.54081 -1.45769e-16 0.020944"/>
+      <geometry>
+        <mesh filename="meshes/elbow_bracket_right.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link left_hand -->
+  <link name="left_hand">
+    <inertial>
+      <origin xyz="3.29862e-05 0.0457716 -0.0183427" rpy="0 0 0"/>
+      <mass value="0.0785869"/>
+      <inertia ixx="5.93041e-05" ixy="1.10922e-07" ixz="-7.70164e-09" iyy="1.65524e-05" iyz="1.65605e-06" izz="4.8316e-05"/>
+    </inertial>
+    <!-- Part left_hand -->
+    <visual>
+      <origin xyz="0.150163 0.250671 -0.00793708" rpy="-1.60078 -1.09074e-16 2.98733"/>
+      <geometry>
+        <mesh filename="meshes/left_hand.stl"/>
+      </geometry>
+      <material name="left_hand_material">
+        <color rgba="0.972549 0.529412 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.150163 0.250671 -0.00793708" rpy="-1.60078 -1.09074e-16 2.98733"/>
+      <geometry>
+        <mesh filename="meshes/left_hand.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from elbow_bracket_right to left_hand -->
+  <joint name="left_elbow_yaw" type="revolute">
+    <origin xyz="0.000203946 0.0710289 0.00015" rpy="-3.14159 2.39856e-16 3.1381"/>
+    <parent link="elbow_bracket_right"/>
+    <child link="left_hand"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.0472" upper="1.0472"/>
+  </joint>
+  <!-- Joint from left_shoulder_yaw to elbow_bracket_right -->
+  <joint name="left_shoulder_yaw" type="revolute">
+    <origin xyz="0.0162992 -0.018825 0.03" rpy="1.5708 2.0687e-13 3.14159"/>
+    <parent link="left_shoulder_yaw"/>
+    <child link="elbow_bracket_right"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.174533" upper="0.872665"/>
+  </joint>
+  <!-- Joint from draft__speaker_mount to left_shoulder_yaw -->
+  <joint name="left_shoulder_pitch" type="revolute">
+    <origin xyz="0.126393 0.0263191 -0.00628152" rpy="7.76395e-17 1.5708 0"/>
+    <parent link="draft__speaker_mount"/>
+    <child link="left_shoulder_yaw"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.74533" upper="1.74533"/>
+  </joint>
+  <!-- Link right_shoulder_yaw -->
+  <link name="right_shoulder_yaw">
+    <inertial>
+      <origin xyz="0.00296785 -0.000140118 -0.0169439" rpy="0 0 0"/>
+      <mass value="0.045585"/>
+      <inertia ixx="2.55161e-05" ixy="7.67506e-08" ixz="1.8779e-06" iyy="1.15467e-05" iyz="-3.85747e-08" izz="2.49228e-05"/>
+    </inertial>
+    <!-- Part right_shoulder_yaw -->
+    <visual>
+      <origin xyz="0.353462 -0.0580669 0.07815" rpy="-0.162826 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/right_shoulder_yaw.stl"/>
+      </geometry>
+      <material name="right_shoulder_yaw_material">
+        <color rgba="0.980392 0.713725 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.353462 -0.0580669 0.07815" rpy="-0.162826 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/right_shoulder_yaw.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link elbow_bracket_left -->
+  <link name="elbow_bracket_left">
+    <inertial>
+      <origin xyz="1.97628e-05 -0.0355299 -0.0171487" rpy="0 0 0"/>
+      <mass value="0.166819"/>
+      <inertia ixx="0.000142993" ixy="-4.30769e-08" ixz="4.97671e-09" iyy="3.75953e-05" iyz="-2.51593e-07" izz="0.000129961"/>
+    </inertial>
+    <!-- Part elbow_bracket_left -->
+    <visual>
+      <origin xyz="0.264302 -0.235627 0.0394922" rpy="-1.73362 3.81552e-16 0.532325"/>
+      <geometry>
+        <mesh filename="meshes/elbow_bracket_left.stl"/>
+      </geometry>
+      <material name="elbow_bracket_left_material">
+        <color rgba="0.972549 0.529412 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.264302 -0.235627 0.0394922" rpy="-1.73362 3.81552e-16 0.532325"/>
+      <geometry>
+        <mesh filename="meshes/elbow_bracket_left.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part right_elbow_yaw_sts3250 -->
+    <visual>
+      <origin xyz="0.0041461 -0.359044 0.220421" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/right_elbow_yaw_sts3250.stl"/>
+      </geometry>
+      <material name="right_elbow_yaw_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0041461 -0.359044 0.220421" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/right_elbow_yaw_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part right_shoulder_yaw_sts3250 -->
+    <visual>
+      <origin xyz="-0.00410465 0.372035 0.129571" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/right_shoulder_yaw_sts3250.stl"/>
+      </geometry>
+      <material name="right_shoulder_yaw_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00410465 0.372035 0.129571" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/right_shoulder_yaw_sts3250.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link right_hand -->
+  <link name="right_hand">
+    <inertial>
+      <origin xyz="3.31914e-05 0.0457723 0.0183427" rpy="0 0 0"/>
+      <mass value="0.0785883"/>
+      <inertia ixx="5.93055e-05" ixy="1.1006e-07" ixz="7.5986e-09" iyy="1.65525e-05" iyz="-1.65587e-06" izz="4.83178e-05"/>
+    </inertial>
+    <!-- Part right_hand -->
+    <visual>
+      <origin xyz="0.294388 0.101328 -0.0393919" rpy="1.40797 2.04775e-15 -0.757975"/>
+      <geometry>
+        <mesh filename="meshes/right_hand.stl"/>
+      </geometry>
+      <material name="right_hand_material">
+        <color rgba="0.972549 0.529412 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.294388 0.101328 -0.0393919" rpy="1.40797 2.04775e-15 -0.757975"/>
+      <geometry>
+        <mesh filename="meshes/right_hand.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from elbow_bracket_left to right_hand -->
+  <joint name="right_elbow_yaw" type="revolute">
+    <origin xyz="4.14476e-05 -0.071009 -0.00015" rpy="-3.14159 -1.76622e-14 2.10863e-15"/>
+    <parent link="elbow_bracket_left"/>
+    <child link="right_hand"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.0472" upper="1.0472"/>
+  </joint>
+  <!-- Joint from right_shoulder_yaw to elbow_bracket_left -->
+  <joint name="right_shoulder_yaw" type="revolute">
+    <origin xyz="0.0162992 -0.018825 -0.03" rpy="1.5708 -2.36841e-15 -2.66347e-16"/>
+    <parent link="right_shoulder_yaw"/>
+    <child link="elbow_bracket_left"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.174533" upper="0.872665"/>
+  </joint>
+  <!-- Joint from draft__speaker_mount to right_shoulder_yaw -->
+  <joint name="right_shoulder_pitch" type="revolute">
+    <origin xyz="-0.0294061 0.0263191 -0.00628152" rpy="-2.55427e-16 1.5708 0"/>
+    <parent link="draft__speaker_mount"/>
+    <child link="right_shoulder_yaw"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.74533" upper="1.74533"/>
+  </joint>
+  <!-- Link hip_yaw_right -->
+  <link name="hip_yaw_right">
+    <inertial>
+      <origin xyz="-0.00148272 -0.00826949 -0.014932" rpy="0 0 0"/>
+      <mass value="0.102009"/>
+      <inertia ixx="3.81332e-05" ixy="-4.22453e-07" ixz="-8.6625e-07" iyy="4.42604e-05" iyz="1.13063e-06" izz="3.56004e-05"/>
+    </inertial>
+    <!-- Part right_hip_yaw_sts3250 -->
+    <visual>
+      <origin xyz="0.217535 -0.258821 -0.0152553" rpy="1.5708 -8.94808e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="meshes/right_hip_yaw_sts3250.stl"/>
+      </geometry>
+      <material name="right_hip_yaw_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.217535 -0.258821 -0.0152553" rpy="1.5708 -8.94808e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="meshes/right_hip_yaw_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part hip_yaw_right -->
+    <visual>
+      <origin xyz="0.20724 -0.0199655 0.04565" rpy="-0.0960432 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/hip_yaw_right.stl"/>
+      </geometry>
+      <material name="hip_yaw_right_material">
+        <color rgba="0.960784 0.835294 0.470588 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.20724 -0.0199655 0.04565" rpy="-0.0960432 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/hip_yaw_right.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link hip_roll_right -->
+  <link name="hip_roll_right">
+    <inertial>
+      <origin xyz="-5.60713e-05 -0.0430339 0.02793" rpy="0 0 0"/>
+      <mass value="0.110226"/>
+      <inertia ixx="6.66397e-05" ixy="2.00622e-07" ixz="-1.87729e-07" iyy="3.67015e-05" iyz="6.40789e-06" izz="4.58576e-05"/>
+    </inertial>
+    <!-- Part hip_roll_right -->
+    <visual>
+      <origin xyz="-0.0870578 -0.185933 0.00553453" rpy="1.47475 -4.02327e-16 3.02589"/>
+      <geometry>
+        <mesh filename="meshes/hip_roll_right.stl"/>
+      </geometry>
+      <material name="hip_roll_right_material">
+        <color rgba="0.972549 0.529412 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0870578 -0.185933 0.00553453" rpy="1.47475 -4.02327e-16 3.02589"/>
+      <geometry>
+        <mesh filename="meshes/hip_roll_right.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part right_hip_roll_sts3250 -->
+    <visual>
+      <origin xyz="0.00410465 -0.301081 -0.122035" rpy="-3.98545e-16 1.36185e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="meshes/right_hip_roll_sts3250.stl"/>
+      </geometry>
+      <material name="right_hip_roll_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00410465 -0.301081 -0.122035" rpy="-3.98545e-16 1.36185e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="meshes/right_hip_roll_sts3250.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link knee_pitch_right -->
+  <link name="knee_pitch_right">
+    <inertial>
+      <origin xyz="-0.00588904 -0.00102899 0.00180061" rpy="0 0 0"/>
+      <mass value="0.028899"/>
+      <inertia ixx="1.87564e-05" ixy="1.77064e-07" ixz="2.55539e-06" iyy="1.45486e-05" iyz="-8.97131e-07" izz="8.77405e-06"/>
+    </inertial>
+    <!-- Part knee_pitch_right -->
+    <visual>
+      <origin xyz="-0.0682522 -0.0548662 -0.118173" rpy="-0.0960432 -0.115706 -2.35619"/>
+      <geometry>
+        <mesh filename="meshes/knee_pitch_right.stl"/>
+      </geometry>
+      <material name="knee_pitch_right_material">
+        <color rgba="0.972549 0.529412 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0682522 -0.0548662 -0.118173" rpy="-0.0960432 -0.115706 -2.35619"/>
+      <geometry>
+        <mesh filename="meshes/knee_pitch_right.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link ankle_pitch_right -->
+  <link name="ankle_pitch_right">
+    <inertial>
+      <origin xyz="-2.29323e-08 0.0388629 -0.0170499" rpy="0 0 0"/>
+      <mass value="0.170594"/>
+      <inertia ixx="0.000170774" ixy="-1.15336e-07" ixz="-3.58519e-10" iyy="3.89921e-05" iyz="-4.67697e-10" izz="0.00015738"/>
+    </inertial>
+    <!-- Part right_ankle_pitch_sts3250 -->
+    <visual>
+      <origin xyz="-0.00410662 0.0777583 0.233571" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/right_ankle_pitch_sts3250.stl"/>
+      </geometry>
+      <material name="right_ankle_pitch_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00410662 0.0777583 0.233571" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/right_ankle_pitch_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part right_knee_pitch_sts3250 -->
+    <visual>
+      <origin xyz="0.00410465 -0.069035 0.233571" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/right_knee_pitch_sts3250.stl"/>
+      </geometry>
+      <material name="right_knee_pitch_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00410465 -0.069035 0.233571" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/right_knee_pitch_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part ankle_pitch_right -->
+    <visual>
+      <origin xyz="0.0751743 0.0879978 0.0362915" rpy="1.58969 -0.778735 -0.23911"/>
+      <geometry>
+        <mesh filename="meshes/ankle_pitch_right.stl"/>
+      </geometry>
+      <material name="ankle_pitch_right_material">
+        <color rgba="0.960784 0.835294 0.470588 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0751743 0.0879978 0.0362915" rpy="1.58969 -0.778735 -0.23911"/>
+      <geometry>
+        <mesh filename="meshes/ankle_pitch_right.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link foot_right -->
+  <link name="foot_right">
+    <inertial>
+      <origin xyz="0.00907804 -0.023303 0.0186023" rpy="0 0 0"/>
+      <mass value="0.0823929"/>
+      <inertia ixx="2.36271e-05" ixy="1.38441e-06" ixz="-3.12318e-07" iyy="8.07125e-05" iyz="8.48431e-07" izz="6.7318e-05"/>
+    </inertial>
+    <!-- Part foot_right -->
+    <collision>
+      <origin xyz="0.01 -0.02911 0.019025" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <box size="0.0125 0.096 0.012"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.02511 -0.01 -0.045685" rpy="-1.9885e-16 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/foot_right.stl"/>
+      </geometry>
+      <material name="foot_right_material">
+        <color rgba="0.498039 0.498039 0.498039 1"/>
+      </material>
+    </visual>
+  </link>
+  <!-- Joint from ankle_pitch_right to foot_right -->
+  <joint name="right_ankle_pitch" type="revolute">
+    <origin xyz="-1.97183e-06 0.0777233 -2.57606e-16" rpy="3.14159 -6.14809e-16 -6.56817e-16"/>
+    <parent link="ankle_pitch_right"/>
+    <child link="foot_right"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.5708" upper="1.5708"/>
+  </joint>
+  <!-- Joint from knee_pitch_right to ankle_pitch_right -->
+  <joint name="right_knee_pitch" type="revolute">
+    <origin xyz="3.46945e-18 -0.018825 -0.02471" rpy="-1.5708 -4.04379e-15 3.14159"/>
+    <parent link="knee_pitch_right"/>
+    <child link="ankle_pitch_right"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.5708" upper="1.5708"/>
+  </joint>
+  <!-- Joint from hip_roll_right to knee_pitch_right -->
+  <joint name="right_hip_roll" type="revolute">
+    <origin xyz="-1.90264e-14 -0.0675097 0.015" rpy="-1.5708 -1.5708 0"/>
+    <parent link="hip_roll_right"/>
+    <child link="knee_pitch_right"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.785398" upper="0.785398"/>
+  </joint>
+  <!-- Joint from hip_yaw_right to hip_roll_right -->
+  <joint name="right_hip_yaw" type="revolute">
+    <origin xyz="0.0125 -0.0252497 -0.01936" rpy="-1.5708 1.5708 0"/>
+    <parent link="hip_yaw_right"/>
+    <child link="hip_roll_right"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.0872665" upper="1.5708"/>
+  </joint>
+  <!-- Joint from draft__speaker_mount to hip_yaw_right -->
+  <joint name="right_hip_pitch" type="revolute">
+    <origin xyz="0.00309391 0.0263191 -0.156282" rpy="3.90184e-16 1.5708 0"/>
+    <parent link="draft__speaker_mount"/>
+    <child link="hip_yaw_right"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.5708" upper="1.5708"/>
+  </joint>
+  <!-- Link hip_yaw_left -->
+  <link name="hip_yaw_left">
+    <inertial>
+      <origin xyz="-0.00148272 -0.0082695 0.0149122" rpy="0 0 0"/>
+      <mass value="0.102009"/>
+      <inertia ixx="3.81153e-05" ixy="-4.22457e-07" ixz="9.38359e-07" iyy="4.42425e-05" iyz="-1.13798e-06" izz="3.56004e-05"/>
+    </inertial>
+    <!-- Part left_hip_yaw_sts3250 -->
+    <visual>
+      <origin xyz="0.217535 0.273179 0.0234647" rpy="1.5708 2.25267e-14 -1.5708"/>
+      <geometry>
+        <mesh filename="meshes/left_hip_yaw_sts3250.stl"/>
+      </geometry>
+      <material name="left_hip_yaw_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.217535 0.273179 0.0234647" rpy="1.5708 2.25267e-14 -1.5708"/>
+      <geometry>
+        <mesh filename="meshes/left_hip_yaw_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part hip_yaw_left -->
+    <visual>
+      <origin xyz="0.206825 -0.0238877 -0.04565" rpy="-0.114987 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/hip_yaw_left.stl"/>
+      </geometry>
+      <material name="hip_yaw_left_material">
+        <color rgba="0.960784 0.835294 0.470588 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.206825 -0.0238877 -0.04565" rpy="-0.114987 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/hip_yaw_left.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link hip_roll_left -->
+  <link name="hip_roll_left">
+    <inertial>
+      <origin xyz="-3.77006e-05 -0.0430339 -0.02793" rpy="0 0 0"/>
+      <mass value="0.110226"/>
+      <inertia ixx="6.66398e-05" ixy="2.23164e-07" ixz="1.17769e-07" iyy="3.67018e-05" iyz="-6.40786e-06" izz="4.58579e-05"/>
+    </inertial>
+    <!-- Part left_hip_roll_sts3250 -->
+    <visual>
+      <origin xyz="-0.00410465 0.230919 0.111035" rpy="-3.14159 -2.40201e-17 -1.5708"/>
+      <geometry>
+        <mesh filename="meshes/left_hip_roll_sts3250.stl"/>
+      </geometry>
+      <material name="left_hip_roll_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00410465 0.230919 0.111035" rpy="-3.14159 -2.40201e-17 -1.5708"/>
+      <geometry>
+        <mesh filename="meshes/left_hip_roll_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part hip_roll_left -->
+    <visual>
+      <origin xyz="-0.0478261 -0.199252 -0.00161235" rpy="-1.68578 -1.68681e-16 0.0872665"/>
+      <geometry>
+        <mesh filename="meshes/hip_roll_left.stl"/>
+      </geometry>
+      <material name="hip_roll_left_material">
+        <color rgba="0.972549 0.529412 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0478261 -0.199252 -0.00161235" rpy="-1.68578 -1.68681e-16 0.0872665"/>
+      <geometry>
+        <mesh filename="meshes/hip_roll_left.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link knee_pitch_left -->
+  <link name="knee_pitch_left">
+    <inertial>
+      <origin xyz="-0.00588902 -0.00102902 -0.00180068" rpy="0 0 0"/>
+      <mass value="0.0288988"/>
+      <inertia ixx="1.87563e-05" ixy="1.77057e-07" ixz="-2.55539e-06" iyy="1.45486e-05" iyz="8.9715e-07" izz="8.774e-06"/>
+    </inertial>
+    <!-- Part knee_pitch_left -->
+    <visual>
+      <origin xyz="-0.0432846 -0.0243516 0.131492" rpy="3.02661 0.0872665 0.785398"/>
+      <geometry>
+        <mesh filename="meshes/knee_pitch_left.stl"/>
+      </geometry>
+      <material name="knee_pitch_left_material">
+        <color rgba="0.972549 0.529412 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0432846 -0.0243516 0.131492" rpy="3.02661 0.0872665 0.785398"/>
+      <geometry>
+        <mesh filename="meshes/knee_pitch_left.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link ankle_pitch_left -->
+  <link name="ankle_pitch_left">
+    <inertial>
+      <origin xyz="1.6292e-05 0.038867 0.0195498" rpy="0 0 0"/>
+      <mass value="0.170594"/>
+      <inertia ixx="0.000170816" ixy="-2.234e-07" ixz="2.13458e-09" iyy="3.89924e-05" iyz="-3.3684e-10" izz="0.000157422"/>
+    </inertial>
+    <!-- Part ankle_pitch_left -->
+    <visual>
+      <origin xyz="-0.0598984 0.0984299 0.0423767" rpy="1.36887 0.7816 0.0383972"/>
+      <geometry>
+        <mesh filename="meshes/ankle_pitch_left.stl"/>
+      </geometry>
+      <material name="ankle_pitch_left_material">
+        <color rgba="0.960784 0.835294 0.470588 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0598984 0.0984299 0.0423767" rpy="1.36887 0.7816 0.0383972"/>
+      <geometry>
+        <mesh filename="meshes/ankle_pitch_left.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part left_ankle_pitch_sts3250 -->
+    <visual>
+      <origin xyz="-0.00406061 0.0687758 -0.261829" rpy="1.56905 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/left_ankle_pitch_sts3250.stl"/>
+      </geometry>
+      <material name="left_ankle_pitch_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00406061 0.0687758 -0.261829" rpy="1.56905 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/left_ankle_pitch_sts3250.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part left_knee_pitch_sts3250 -->
+    <visual>
+      <origin xyz="0.00410465 -0.052035 -0.261829" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/left_knee_pitch_sts3250.stl"/>
+      </geometry>
+      <material name="left_knee_pitch_sts3250_material">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00410465 -0.052035 -0.261829" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/left_knee_pitch_sts3250.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link foot_left -->
+  <link name="foot_left">
+    <inertial>
+      <origin xyz="0.00907597 -0.0233031 -0.0186007" rpy="0 0 0"/>
+      <mass value="0.0823964"/>
+      <inertia ixx="2.36272e-05" ixy="1.38394e-06" ixz="3.20627e-07" iyy="8.07209e-05" iyz="-8.48677e-07" izz="6.73264e-05"/>
+    </inertial>
+    <!-- Part foot_left -->
+    <collision>
+      <origin xyz="0.01 -0.02911 -0.019025" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <box size="0.0125 0.096 0.012"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.02511 -0.01 0.045685" rpy="-1.9869e-16 -1.5708 0"/>
+      <geometry>
+        <mesh filename="meshes/foot_left.stl"/>
+      </geometry>
+      <material name="foot_left_material">
+        <color rgba="0.498039 0.498039 0.498039 1"/>
+      </material>
+    </visual>
+  </link>
+  <!-- Joint from ankle_pitch_left to foot_left -->
+  <joint name="left_ankle_pitch" type="revolute">
+    <origin xyz="5.96882e-05 0.0777336 -2.77556e-16" rpy="-3.14159 -1.90028e-15 -0.00174533"/>
+    <parent link="ankle_pitch_left"/>
+    <child link="foot_left"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.5708" upper="1.5708"/>
+  </joint>
+  <!-- Joint from knee_pitch_left to ankle_pitch_left -->
+  <joint name="left_knee_pitch" type="revolute">
+    <origin xyz="2.08167e-17 -0.018825 0.02471" rpy="1.5708 -2.23382e-16 -3.14159"/>
+    <parent link="knee_pitch_left"/>
+    <child link="ankle_pitch_left"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.5708" upper="1.5708"/>
+  </joint>
+  <!-- Joint from hip_roll_left to knee_pitch_left -->
+  <joint name="left_hip_roll" type="revolute">
+    <origin xyz="-1.94428e-14 -0.0675097 -0.015" rpy="1.5708 1.5708 0"/>
+    <parent link="hip_roll_left"/>
+    <child link="knee_pitch_left"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.785398" upper="0.785398"/>
+  </joint>
+  <!-- Joint from hip_yaw_left to hip_roll_left -->
+  <joint name="left_hip_yaw" type="revolute">
+    <origin xyz="0.0125 -0.0252497 0.01936" rpy="1.5708 -1.5708 0"/>
+    <parent link="hip_yaw_left"/>
+    <child link="hip_roll_left"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.0872665" upper="1.5708"/>
+  </joint>
+  <!-- Joint from draft__speaker_mount to hip_yaw_left -->
+  <joint name="left_hip_pitch" type="revolute">
+    <origin xyz="0.0938933 0.0263191 -0.156282" rpy="1.04552e-16 1.5708 0"/>
+    <parent link="draft__speaker_mount"/>
+    <child link="hip_yaw_left"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-1.5708" upper="1.5708"/>
+  </joint>
+</robot>
